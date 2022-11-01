@@ -4,67 +4,38 @@
 }
 
 .kasa-header {
-    position: absolute;
-    width: 1240px;
-    height: 68px;
-    left: 100px;
-    top: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
 }
 
-.kasa-header-logo {
-    position: absolute;
-    left: 0%;
-    right: 83.04%;
-    top: 0%;
-    bottom: 0%;
-}
+
 
 .kasa-header-nav {
-    position: absolute;
-    left: 75.08%;
-    right: 0%;
-    top: 25%;
-    bottom: 25%;
-
-}
-
-.nav-accueil {
-    position: absolute;
-    left: 273px;
-    right: 13.95%;
-    top: 25%;
-    bottom: 25%;
-
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    min-width: 215px;
+    max-width: 340px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 34.22px;
+}
 
+.nav-accueil {
+    line-height: 34.22px;
     display: flex;
     align-items: flex-end;
     text-align: right;
     text-decoration-line: underline;
-
     color: #FF6060;
 }
 
 .nav-apropos {
-    position: absolute;
-    left: 100px;
-    right: 0%;
-    top: 25%;
-    bottom: 25%;
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
     line-height: 142.6%;
-    /* or 34px */
     display: flex;
     align-items: flex-end;
     text-align: right;
-
     color: #FF6060;
 }

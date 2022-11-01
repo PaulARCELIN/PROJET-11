@@ -10,24 +10,25 @@ import Header from './Header';
 
 function App() {
   return (
-    <Router>
-      <div>
-        
-        <Header />
-
-        <Routes>
-          <Route exact path="/" element={<Home />}>
-          </Route>
-          <Route exact path="/fiche" element={<Fiche />}>
-          </Route>
-          <Route exact path="/apropos" element={<Apropos />}>
-          </Route>
-          <Route path='*' element={<Error />}>
-          </Route>
-        </Routes>
+    
+    <div>
       
-      </div>
-    </Router>
+      
+      <Router>
+      <Header />
+          <Routes>
+            <Route exact path="/" element={<Home />}>
+            </Route>
+            <Route exact path="/fiche" element={<Fiche />}>
+            </Route>
+            <Route exact path="/apropos" element={<Apropos />}>
+            </Route>
+            <Route path='*' element={<Error />}>
+            </Route>
+          </Routes>
+
+      </Router>
+    </div>  
   );
 }
 
