@@ -4,16 +4,13 @@
 }
 
 body {
-  margin: 0;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   width: auto;
-  height: auto;
   background: #FFFFFF;
   font-family: 'Montserrat';
-  padding-left: 100px;
-  padding-right: 100px;
   padding-top: 40px;
 }
 

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import '../styles/Collapse.css'
 
-function Collapse() {
+function Collapse({ title, content }) {
     const [isOpen, setOpen] = useState(false);
 
     const toggle = () => {
         setOpen(!isOpen);
     }
 
-    return (<div>
-        <button onClick={toggle}>TITLE</button>
-        {isOpen && <div>CONTENT</div>}
+    return (<div className="collapse">
+        <button onClick={toggle} className="collapse-btn">{title}</button>
+        {isOpen && <div className="collapse-content">{content}</div>}
     </div>)
 }
 

@@ -2,9 +2,10 @@
     height: 223px;
     display: flex;
     border-radius: 25px;
-    
     margin: auto;
     position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .banner-img {
