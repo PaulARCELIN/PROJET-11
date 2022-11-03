@@ -7,7 +7,7 @@ function LocationList() {
   return (
     <div className="loc-list">
         {data.map((e) => (
-            <LocationCard title={e.title} cover={e.cover} key={e.id} />
+            <LocationCard title={e.title} cover={e.cover} key={e.id} id={e.id} />
         ))}
     </div>
   )
