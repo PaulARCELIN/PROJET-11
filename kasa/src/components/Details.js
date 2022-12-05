@@ -14,7 +14,10 @@ function Details({ id }) {
         }
     })
 
-    console.log(logement.rating)
+    // const liste = logement.equipments.toString()
+    
+    const liste = logement.equipments
+    
 
     return(<div className="details">
         <div className="details-top">
@@ -33,7 +36,9 @@ function Details({ id }) {
         </div>
         <div className="details-bottom">
             <Collapse title="Description" content={logement.description} />
-            <Collapse title="Equipements" content={logement.equipments} className="Test"/>
+            <Collapse title="Equipements" content={<ul className="collapse-list">{liste.map((e) => {
+                return (<li>{e}</li>)
+            })}</ul>}/>
         </div>
     </div>)
 } 

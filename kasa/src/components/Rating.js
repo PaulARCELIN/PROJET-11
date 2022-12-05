@@ -1,9 +1,7 @@
 import React from "react";
 
 function RatingStar({ rate }) {
-    const range = [1, 2, 3, 4, 5]
-    
-    
+    const range = [1, 2, 3, 4, 5]   
 
     return (
         <div className="details-rating">

@@ -4,17 +4,20 @@ import Apropos from '../pages/A-Propos'
 import Error from '../pages/Error.js';
 import React from 'react';
 import Logement from '../pages/Logement';
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './Header';
+import Footer from './Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Navigate } from 'react-router'
 
 function App() {
   return (
-    <div>
+    <div className='root'>
       <Router>
           <Header />
           <Routes>
-            <Route exact path="/" element={<Home />}>
+            <Route exact path="/accueil" element={<Home />}>
+            </Route>
+            <Route exact path="/" element={<Navigate to="/accueil" />}>
             </Route>
             <Route exact path="/apropos" element={<Apropos />}>
             </Route>
@@ -23,6 +26,7 @@ function App() {
             <Route path='*' element={<Error />}>
             </Route>
           </Routes>
+          <Footer />
       </Router>
     </div>  
   );

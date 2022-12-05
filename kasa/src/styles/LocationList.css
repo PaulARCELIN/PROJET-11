@@ -2,7 +2,7 @@
     margin-top: 43px;
     background: #F7F7F7;
     border-radius: 25px;
-    padding: 50px 50px 0px 50px;
+    padding: 40px 40px 20px 40px;
     margin-left: 100px;
     margin-right: 100px;
     display: flex;
@@ -16,21 +16,26 @@
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     position: relative;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
 .loc-img {
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100%; 
 }
 
-.loc-img:after{
+.loc-filter {
+    position: absolute;
     width: 340px;
     height: 340px;
-    content: 'dffdfs';
-    background: linear-gradient(black,#eac781);
+    background-color: black;
+    background: linear-gradient(rgba(0,0,0,0) 75%, black);
+    opacity: 80%;
+    z-index: 1;
 }
 
 .loc-title {
@@ -41,4 +46,19 @@
     top: 78.82%;
     bottom: 5.88%;
     max-width: 50%;
+    z-index: 2;
+}
+
+@media screen and (max-width: 770px) {
+    .loc-list {
+        padding: 0;
+        background: white;
+        margin-left: 0px;
+        margin-right: 00px;
+    }
+
+    .loc-card {
+        min-width: 340px;
+        margin: 10px;
+    }
 }

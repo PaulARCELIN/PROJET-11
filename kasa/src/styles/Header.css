@@ -9,6 +9,7 @@
     margin-bottom: 65px;
     padding-left: 100px;
     padding-right: 100px;
+    padding-top: 40px;
 }
 
 
@@ -26,18 +27,44 @@
 }
 
 .nav-accueil {
-    line-height: 34.22px;
     display: flex;
     align-items: flex-end;
     text-align: right;
-    text-decoration-line: underline;
     color: #FF6060;
+    text-decoration: none;
 }
 
 .nav-apropos {
-    line-height: 142.6%;
     display: flex;
     align-items: flex-end;
     text-align: right;
     color: #FF6060;
+    text-decoration: none;
 }
+
+.active {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 770px) {
+    .kasa-header {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .kasa-header-nav {
+        font-weight: 500;
+        font-size: 12px;
+        justify-content: space-around;
+        align-items: flex-end;
+        min-width: 150px;
+    }
+
+    .kasa-header-logo {
+        width: 145px;
+        height: 47px;
+        margin-right: 50px;
+    }
+}
+

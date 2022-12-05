@@ -1,8 +1,13 @@
 .details-top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-left: 100px;
     margin-right: 100px;
+}
+
+.details-top-left {
+    width: 70%;
 }
 
 .details-title {
@@ -25,7 +30,11 @@
 
 .details-taglist {
     display: flex;
+    flex-wrap: wrap;
 }
+
+
+
 
 .details-tag {
     font-family: 'Montserrat';
@@ -50,6 +59,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 1090px) {
+    .details-top-right {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .details-top-left {
+        width: 100%;
+    }
 }
 
 .details-host {
@@ -89,4 +110,88 @@
     color: #E3E3E3;
     margin: 8px;
     font-size: 42px;
+}
+
+.details-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.details-bottom .collapse {
+    width: 100%;
+    max-width: 780px;
+    margin-left: 0px;
+}
+
+.details-bottom .collapse:first-child {
+    margin-right: 75px;
+}
+
+.collapse-equipements {
+    margin-left: 30px;
+}
+
+.collapse-content .collapse-list {
+    padding: 0;
+    list-style: none;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 770px) {
+    .details-host {
+        justify-content: space-between;
+    }
+    
+    .details-host-name {
+        font-size: 12px;  
+        margin-right: 0px;
+    }
+
+    .details-host-picture {
+        transform: scale(50%);
+    }
+
+    .red-stars {
+        font-size: 21px;
+        margin: 4px;
+    }
+    
+    .grey-stars {
+        font-size: 21px;
+        margin: 4px;
+    }
+
+    .details-top {
+        margin: 20px;
+        margin-bottom: 0px;
+    }
+
+    .details-tag {
+        justify-content: space-between;
+        font-size: 14px;
+        margin-left: 0px;
+        margin-right: 5px;
+        width: 84px;
+        padding: 5px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .details-bottom {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .details-bottom .collapse {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .details-bottom .collapse:first-child {
+        margin-top: 0px;
+    }
 }
