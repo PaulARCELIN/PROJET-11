@@ -14,7 +14,6 @@ function Slideshow({ id }) {
     
     const images = logement.pictures 
 
-console.log(current)
 
     const nextSlide = () => {
         setCurrent(current === images.length - 1 ? 0 : current + 1)
@@ -41,7 +40,7 @@ console.log(current)
             
             )
         })}
-        <div className="count">{current +1 }/{images.length}</div>
+        <div className="count">{current + 1 }/{images.length}</div>
         {images.length > 1 && <button onClick={nextSlide} className='next-arrow'>❯</button>}
     </section>)
 }
