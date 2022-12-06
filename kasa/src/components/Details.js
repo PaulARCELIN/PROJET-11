@@ -14,11 +14,8 @@ function Details({ id }) {
         }
     })
 
-    // const liste = logement.equipments.toString()
-    
     const liste = logement.equipments
     
-
     return(<div className="details">
         <div className="details-top">
             <div className="details-top-left">
@@ -37,7 +34,7 @@ function Details({ id }) {
         <div className="details-bottom">
             <Collapse title="Description" content={logement.description} />
             <Collapse title="Equipements" content={<ul className="collapse-list">{liste.map((e) => {
-                return (<li>{e}</li>)
+                return (<li key={e}>{e}</li>)
             })}</ul>}/>
         </div>
     </div>)

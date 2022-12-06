@@ -4,7 +4,7 @@ import Collapse from "../components/Collapse"
 import '../styles/Apropos.css'
 
 function Apropos() {
-    return (<div>
+    return (<div className="Apropos">
         <Banner img={img} />
 
         <div className="collapse-list">

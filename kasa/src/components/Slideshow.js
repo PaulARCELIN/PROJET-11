@@ -14,6 +14,8 @@ function Slideshow({ id }) {
     
     const images = logement.pictures 
 
+console.log(current)
+
     const nextSlide = () => {
         setCurrent(current === images.length - 1 ? 0 : current + 1)
     }
@@ -27,17 +29,20 @@ function Slideshow({ id }) {
     }
 
     return(<section className="slideshow">
-        <button onClick={prevSlide} className='prev-arrow'> ❮ </button>   
+        {images.length > 1 && <button onClick={prevSlide} className='prev-arrow'> ❮ </button>}   
         {images.map((slide, index) => {
             return (
                 <div className={index === current ? 'slide-active' : 'slide'} key={index}>
                  {index === current && (
                     <img src={slide} alt="slideshow" className="slide-img"></img>
                  )}
+                 
             </div>
+            
             )
         })}
-        <button onClick={nextSlide} className='next-arrow'>❯</button>
+        <div className="count">{current +1 }/{images.length}</div>
+        {images.length > 1 && <button onClick={nextSlide} className='next-arrow'>❯</button>}
     </section>)
 }
 
