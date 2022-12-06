@@ -32,7 +32,7 @@ function Slideshow({ id }) {
             return (
                 <div className={index === current ? 'slide-active' : 'slide'} key={index}>
                  {index === current && (
-                    <img src={slide} alt="test" className="slide-img"></img>
+                    <img src={slide} alt="slideshow" className="slide-img"></img>
                  )}
             </div>
             )
